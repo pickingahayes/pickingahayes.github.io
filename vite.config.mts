@@ -7,6 +7,7 @@ import Vue from '@vitejs/plugin-vue'
 import VueRouter from 'unplugin-vue-router/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
 import Vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
+import { viteStaticCopy } from 'vite-plugin-static-copy'
 
 // Utilities
 import { defineConfig } from 'vite'
@@ -16,6 +17,14 @@ import { fileURLToPath, URL } from 'node:url'
 export default defineConfig({
   base: '/',
   plugins: [
+    viteStaticCopy({
+      targets: [
+        {
+          src: '404.html',
+          dest: ''
+        }
+      ]
+    }),
     VueRouter({
       dts: 'src/typed-router.d.ts',
     }),
