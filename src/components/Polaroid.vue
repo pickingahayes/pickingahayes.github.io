@@ -135,11 +135,19 @@ onMounted(() => {
   font-size: 20px;
 }
 
+.small .back {
+  font-size: 5vmin;
+}
+
 .small {
   font-size: 20px;
 }
 
 .medium .small {
   font-size: 15.5px;
+}
+
+.small .back.small {
+  font-size: 3.6vmin;
 }
 </style>

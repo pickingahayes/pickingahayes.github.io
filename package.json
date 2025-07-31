@@ -5,6 +5,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
+    "dev:host": "vite --host",
     "build": "run-p type-check \"build-only {@}\" -- && cp dist/index.html dist/404.html",
     "preview": "vite preview",
     "build-only": "vite build",
