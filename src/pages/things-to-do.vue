@@ -1,15 +1,24 @@
 <template>
   <div class="things-to-do-page poiret-one">
     <v-container class="things-container px-10" fluid>
-      <v-row v-for="({ title, sections }, i) in activities" :key="i" class="todo-row ga-5" justify="center">
+      <v-row
+        v-for="({ title, sections }, i) in activities"
+        :key="i"
+        class="todo-row ga-5"
+        justify="center"
+      >
         <v-col cols="8">
           <h5 class="great-vibes font-weight-bold text-center header">{{ title }}</h5>
         </v-col>
 
-        <div class="d-flex flex-column w-100" v-for="({ title, type, locations }, j) in sections" :key="j">
+        <div
+          class="d-flex flex-column w-100"
+          v-for="({ title, type, locations }, j) in sections"
+          :key="j"
+        >
           <h5 class="josefin-sans font-weight-bold section-header">{{ title }}</h5>
 
-          <div class="pl-3 d-flex flex-row flex-wrap ga-8 " :class="{ 'justify-center': isMobile }">
+          <div class="pl-3 d-flex flex-row flex-wrap ga-8" :class="{ 'justify-center': isMobile }">
             <LocationCell
               v-for="(location, k) in locations"
               :key="k"
@@ -66,7 +75,7 @@ const activities = ref<Activity[]>([
           {
             name: 'Detroit Riverfront Walk',
             url: 'https://maps.app.goo.gl/rZcyBjTqT1jwNVCL7',
-            img: 'https://lh3.googleusercontent.com/gps-cs-s/AC9h4noPtfeabmHuHOKJGHNm_G06Coycl6LLkrOmGJ--K5JerqBhx9IJ4Qpe87TTMgJHqXdb7xbEx_nBra5EGzXus2JtDZgZdNwNQ0yJ39xi7RFjMHGpoWUb3texlal5hJrzB7RpjlGM=w520-h350-n-k-no',
+            img: 'https://images.metroparent.com/wp-content/uploads/2023/04/Riverfront-Run-Nadir-Ali-1068x801.jpg',
             description: 'Riverside park'
           },
           {
@@ -96,7 +105,7 @@ const activities = ref<Activity[]>([
           {
             name: 'U of M Campus (Law Quad, the Diag)',
             url: 'https://maps.app.goo.gl/TGH7fGtD1zuVU8Cp8',
-            img: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/02/38/c6/caption.jpg?w=1200&h=1200&s=1',
+            img: 'https://michigan.law.umich.edu/sites/default/files/styles/global_width/public/2020-10/IG016_Architecture.jpg?itok=YiCvVO63',
             description: 'Sprawling University Campus',
             hoverImg: 'BlockM.png'
           },
@@ -107,7 +116,7 @@ const activities = ref<Activity[]>([
             description: 'The best natural experience in Ann Arbor'
           },
           {
-            name: 'Pinball Pete\'s',
+            name: "Pinball Pete's",
             url: 'https://maps.app.goo.gl/S5pxTmmyVGUK94Fq8',
             img: 'https://static.wixstatic.com/media/da95f6_99293008888945b1a6e959923c7d3b43~mv2_d_3415_3137_s_4_2.jpg/v1/fill/w_3415,h_3137,al_c/da95f6_99293008888945b1a6e959923c7d3b43~mv2_d_3415_3137_s_4_2.jpg',
             description: 'Arcade w/ pinball machines and video games'
@@ -239,7 +248,7 @@ const activities = ref<Activity[]>([
             description: 'Tapas Restaurant'
           },
           {
-            name: "Café Zola",
+            name: 'Café Zola',
             url: 'https://maps.app.goo.gl/paRvqVzoJKYBndBn7',
             img: 'https://ecurrent-com-images.s3.amazonaws.com/wp-content/uploads/2021/11/Screen-Shot-2021-11-03-at-3.21.02-PM.png',
             description: 'Eclectic restaurant'

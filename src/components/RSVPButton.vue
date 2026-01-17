@@ -5,7 +5,12 @@ import ExternalButton from './ExternalButton.vue';
 const { isMobile } = useIsMobile();
 </script>
 <template>
-  <ExternalButton :small="isMobile" class="rsvp-btn" text="RSVP" link="https://www.theknot.com" icon="https://cdn.brandfetch.io/idpvQSn3pL/w/400/h/400/theme/dark/icon.jpeg?c=1dxbfHSJFAPEGdCLU4o5B"></ExternalButton>
+  <ExternalButton
+    :small="isMobile"
+    class="rsvp-btn"
+    text="RSVP"
+    link="https://www.theknot.com/us/lindsey-hayes-and-robert-picking-mar-2026/rsvp"
+    icon="https://cdn.brandfetch.io/idpvQSn3pL/w/400/h/400/theme/dark/icon.jpeg?c=1dxbfHSJFAPEGdCLU4o5B"
+  ></ExternalButton>
 </template>
-<style scoped>
-</style>
+<style scoped></style>

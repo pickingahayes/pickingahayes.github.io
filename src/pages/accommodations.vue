@@ -7,8 +7,11 @@
       />
     </a>
 
-    <div class="prompt" :class="{ 'text-body-1': isMobile, 'text-h5': !isMobile }">
-      Click the link below to reserve a room in our block!
+    <div class="prompt text-center" :class="{ 'text-body-1': isMobile, 'text-h5': !isMobile }">
+      Click the link below to reserve a room in our block!<br />
+      Please note, booking a room in our block includes free Breakfast for Two, Parking and Wifi.<br />
+      Room Rates have varied so keep an eye on the price difference between the block and booking
+      normally.
     </div>
 
     <v-row class="fill-width row">
@@ -33,7 +36,7 @@
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
       </v-col>
-    <alt-logo width="70px"></alt-logo>
+      <alt-logo width="70px"></alt-logo>
     </v-row>
   </div>
 </template>

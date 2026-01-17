@@ -15,11 +15,13 @@ declare module 'vue' {
     ImageTrack: typeof import('./components/ImageTrack.vue')['default']
     LocationCell: typeof import('./components/LocationCell.vue')['default']
     NavLink: typeof import('./components/NavLink.vue')['default']
+    PeterCard: typeof import('./components/weddingparty/PeterCard.vue')['default']
     Polaroid: typeof import('./components/Polaroid.vue')['default']
     RegistryButton: typeof import('./components/RegistryButton.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     RSVPButton: typeof import('./components/RSVPButton.vue')['default']
     SplitFlap: typeof import('./components/SplitFlap.vue')['default']
+    WeddingPartyCard: typeof import('./components/weddingparty/WeddingPartyCard.vue')['default']
   }
 }

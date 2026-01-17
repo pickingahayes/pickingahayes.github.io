@@ -17,26 +17,28 @@
 <script lang="ts" setup>
 import useIsMobile from './composables/useIsMobile';
 
-  const routes = ref([
-    // { route: "rsvp", title: "RSVP" },
-    { route: "registry", title: "Registry" },
-    { route: "our-story", title: "Our Story" },
-    { route: "photos", title: "Photos" },
-    // { route: "wedding-party", title: "Wedding Party" },
-    { route: "q-and-a", title: "Q&A" },
-    { route: "accommodations", title: "Accommodations" },
-    { route: "things-to-do", title: "Things To Do" },
-  ]);
+const routes = ref([
+  { route: 'rsvp', title: 'RSVP' },
+  { route: 'registry', title: 'Registry' },
+  { route: 'our-story', title: 'Our Story' },
+  { route: 'photos', title: 'Photos' },
+  { route: 'wedding-party', title: 'Wedding Party' },
+  { route: 'q-and-a', title: 'Q&A' },
+  { route: 'accommodations', title: 'Accommodations' },
+  { route: 'things-to-do', title: 'Things To Do' }
+]);
 
-  const { isMobile } = useIsMobile();
-  const route = useRoute();
+const { isMobile } = useIsMobile();
+const route = useRoute();
 
-  const hideLogo = computed(() => {
-    if (isMobile.value) {
-      return ['our-story', 'photos', 'accommodations', 'things-to-do', 'q-and-a'].some((name) => route.name?.includes(name));
-    }
-      return ['q-and-a', 'accommodations', 'things-to-do'].some((name) => route.name?.includes(name));
-  })
+const hideLogo = computed(() => {
+  if (isMobile.value) {
+    return ['our-story', 'photos', 'accommodations', 'things-to-do', 'q-and-a'].some((name) =>
+      route.name?.includes(name)
+    );
+  }
+  return ['q-and-a', 'accommodations', 'things-to-do'].some((name) => route.name?.includes(name));
+});
 </script>
 <style scoped>
 :deep(.v-responsive__content) {

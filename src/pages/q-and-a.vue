@@ -2,10 +2,20 @@
   <div class="q-and-a-page d-flex flex-column justify-start">
     <div>Q & A</div>
     <div class="q-and-a px-10">
-      <v-row v-for="({ question, answer }, i) in questions" :key="i" class="d-flex flex-row justify-center my-10 qa-row" :class="{ 'ga-8': !isMobile, 'ga-2': isMobile  }">
-        <v-col col="4" class="col d-flex flex-column justify-center question font-weight-bold">{{ question }}</v-col>
+      <v-row
+        v-for="({ question, answer, image }, i) in questions"
+        :key="i"
+        class="d-flex flex-row justify-center my-10 qa-row"
+        :class="{ 'ga-8': !isMobile, 'ga-2': isMobile }"
+      >
+        <v-col col="4" class="col d-flex flex-column justify-center question font-weight-bold">{{
+          question
+        }}</v-col>
         <v-divider :vertical="!isMobile" :thickness="2"></v-divider>
-        <v-col col="4" class="col d-flex flex-column justify-center text-left answer">{{ answer }}</v-col>
+        <v-col col="4" class="col d-flex flex-column justify-center text-left answer">
+          {{ answer }}
+          <v-img v-if="image" :src="image"></v-img>
+        </v-col>
       </v-row>
       <alt-logo width="70px"></alt-logo>
     </div>
@@ -15,42 +25,47 @@
 <script lang="ts" setup>
 import useIsMobile from '@/composables/useIsMobile';
 
-  const questions = ref([
-    {
-      question: "When does the ceremony actually start?",
-      answer: "4:00pm. Please arrive by 3:45pm to ensure you have time to park and find a seat."
-    },
-    {
-      question: "What is the dress code?",
-      answer: "Formal Cocktail Attire: Mid or full length dresses, jumpsuit or dressy pants suit for women and a suit with tie for men."
-    },
-    {
-      question: "Where is the cocktail hour/reception?",
-      answer: "Cocktail hour is located at the Southfield Westin and the reception will take place in the Garden Atrium at the Westin."
-    },
-    {
-      question: "Where do I park for the ceremony?",
-      answer: "Genesis the Church: Park in the lot across the street from the church, at the corners of W University Ave and N Center St. Enter the church off N Main Street."
-    },
-    {
-      question: "Where do I park for the reception?",
-      answer: "If you are staying overnight at the Westin, please park in the parking garage.If you are not staying at the hotel, you can park on the far left side of the building, marked “2 hour Visitor  Parking” past the CBRE Building."
-    },
-    {
-      question: "Are children invited to the wedding?",
-      answer: "Only those who are on the RSVP should be attending the wedding and reception."
-    },
-    {
-      question: "When will the cocktail hour start?",
-      answer: "6:00pm"
-    },
-    {
-      question: "When do we eat dinner?",
-      answer: "The reception will begin at 7:00pm"
-    },
-  ]);
+const questions = ref([
+  {
+    question: 'When does the ceremony actually start?',
+    answer: '4:00pm. Please arrive by 3:45pm to ensure you have time to park and find a seat.'
+  },
+  {
+    question: 'What is the dress code?',
+    answer:
+      'Formal Cocktail Attire: Mid or full length dresses, jumpsuit or dressy pants suit for women and a suit with tie for men.'
+  },
+  {
+    question: 'Where is the cocktail hour/reception?',
+    answer:
+      'Cocktail hour is located at the Southfield Westin and the reception will take place in the Garden Atrium at the Westin.'
+  },
+  {
+    question: 'Where do I park for the ceremony?',
+    answer:
+      'Genesis the Church: Park in the lot across the street from the church, at the corners of W University Ave and N Center St. Enter the church off N Main Street.',
+    image: 'church.parking.webp'
+  },
+  {
+    question: 'Where do I park for the reception?',
+    answer:
+      'If you are staying overnight at the Westin, please park in the parking garage.If you are not staying at the hotel, you can park on the far left side of the building, marked “2 hour Visitor  Parking” past the CBRE Building.'
+  },
+  {
+    question: 'Are children invited to the wedding?',
+    answer: 'Only those who are on the RSVP should be attending the wedding and reception.'
+  },
+  {
+    question: 'When will the cocktail hour start?',
+    answer: '6:00pm'
+  },
+  {
+    question: 'When do we eat dinner?',
+    answer: 'The reception will begin at 7:00pm'
+  }
+]);
 
-  const { isMobile } = useIsMobile();
+const { isMobile } = useIsMobile();
 </script>
 <style scoped>
 .q-and-a-page {
