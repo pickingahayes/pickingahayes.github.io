@@ -108,6 +108,12 @@ const groomesmen = ref<MemberInfo[]>([
     status: 'Big Dawg'
   },
   {
+    name: 'Anthony Giacopelli',
+    description:
+    "Anthony and Robert first met through their mutual friends Aaron and Cody who were roommates at MSU (omg they were roommates) and from there trauma bonded over League of Legends. He is a guy I know I can always count on and is always there for his friends and family. He is a smart, thoughtful, hilarious man who makes fast friends with anyone he meets and is someone I know that I can come to for advice wiser than his years, or a hilarious story. It is never a dule moment with Anthony around! While I don't get to see him in person anywhere near as much as I'd like, I cherish every moment we've had together. He is an incredible story teller and I could listen to his endless Navy stories for hours, just make sure you've got plenty of time to spare 🤣 On my 30th birthday our friend group made a trip to Las Vegas and Anthony surprised everyone making the trip out there and then also being at our New Years Eve party later that month. It was a highlight for myself and a lot of our friends because we still talk about getting a double dose of Anthony in one month. There is always a reoccurring theme for a group trip or event that we get to do with Anthony and it's always something like \"Man that was a lot of fun, I'm so happy we got to hang with Anthony!\" and that's not just coming from me. Seeing him is always a highlight of any trip and I pray that things can line up in the future that we see each other much more regularly.",
+    status: 'Gen Z Translator'
+  },
+  {
     name: 'Peter Stephan',
     description:
       "What to say about Peter. Peter is the younger brother of Chris (Robert's younger brother in law). Anne and Chris tried their best to keep us apart, knowing that together our powers of intellectually superior humor and flare for the dramatic would be too much for the world to handle. They were right. Peter and I share a love for 3D Printing and gaming. I have spent many, many hours beating Peter (and Chris) at video games, just ask them! Despite the epic beatdowns that he has received at my hands, Peter still manages to be go-getter and I'm always impressed with the projects that he comes up with from 3D printing, including making custom metal trading cards to his own version of board games! Looking forward to the fun that we will get up to when he moves to Ann Arbor for his new job at Michigan Medicine! Go Blue!",
